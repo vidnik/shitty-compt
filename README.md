@@ -84,4 +84,4 @@ python shitty_random.py
 
 
 # Why it's sitty?
-Bro, just take a look at the code.
+Bro, just take a look at the code (heavy dependencies, worst imports ever used, SHA256 used (kinda bad for crypto. hashing), not secure cause randmoness parameters could be determined)
