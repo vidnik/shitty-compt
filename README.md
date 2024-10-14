@@ -75,6 +75,7 @@ python shitty_random.py
    - The generated integer is then transformed into a random number between 1 and 100 using the modulo operation: `n % 100 + 1`.
 
 7. **Output**:
+   [![alt text]([http://url/to/img.png](https://github.com/vidnik/shitty-compt/blob/main/doc/img/output_example.png?raw=true))](https://github.com/vidnik/shitty-compt/blob/main/doc/img/output_example.png?raw=true)
    
 
 
