@@ -54,6 +54,29 @@ python shitty_random.py
 - Make sure your camera is connected and accessible. VERY IMPORTANT 🙏🙏🙏
 - This script requires a working camera to generate the "random" number. If no camera is available, it will raise an error.
 
+# How It Works
+
+1. **Capture Video Frame**:
+   - It initializes a video capture object with `cv2.VideoCapture(0)`, which accesses the default camera. 
+
+2. **Check Camera Access**:
+   - It checks if the camera is opened using `cam.isOpened()`. If the camera is not accessible, it raises an `IOError`.
+
+3. **Process the Frame**:
+   - If the camera is available, the current frame is read. The frame is encoded to JPEG format using `cv2.imencode()`, and its bytes are obtained.
+
+4. **Get System Information**:
+   - The script collects the current number of active processes (`len(psutil.pids())`) and the available memory (`psutil.virtual_memory().available`).
+
+5. **Generate Hash**:
+   - The combined byte data from the encoded frame and system information is encoded in base64. This data is then hashed using SHA-256. The first eight characters of the hexadecimal digest are converted to an integer.
+
+6. **Generate Random Number**:
+   - The generated integer is then transformed into a random number between 1 and 100 using the modulo operation: `n % 100 + 1`.
+
+7. **Output**:
+   
+
 
 # Why it's sitty?
 Bro, just take a look at the code.
